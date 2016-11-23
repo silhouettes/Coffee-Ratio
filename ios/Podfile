@@ -6,7 +6,7 @@ target 'Coffee Ratio' do
   use_frameworks!
 
   # Pods for Coffee Ratio
-	pod 'React', :path => '../node_modules/react-native', :subspecs => [
+  pod 'React', :path => '../node_modules/react-native', :subspecs => [
     'Core',
     'RCTText',
 	'RCTImage',
@@ -14,6 +14,7 @@ target 'Coffee Ratio' do
     'RCTWebSocket', # needed for debugging
     # Add any other subspecs you want to use in your project
   ]
+  pod 'CodePush', :path => '../node_modules/react-native-code-push'
 
   target 'Coffee Ratio UITests' do
     inherit! :search_paths

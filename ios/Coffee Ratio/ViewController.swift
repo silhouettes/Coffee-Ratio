@@ -26,6 +26,7 @@
 
 import UIKit
 import React
+import CodePush
 
 class ViewController: UIViewController {
   
@@ -99,12 +100,20 @@ class ViewController: UIViewController {
   }
   
     @IBAction func renderReactNative(sender : UIButton) {
-        NSLog("Rendering React Native")
-        let jsCodeLocation = NSURL(string: "http://localhost:8081/index.ios.bundle?platform=ios")
+        print("Rendering React Native")
+        // https://www.raywenderlich.com/136047/react-native-existing-app
+        // let jsCodeLocation = Bundle.main.url(forResource: "main", withExtension: "jsbundle")
+        // let jsCodeLocation = URL(string: "http://localhost:8081/index.ios.bundle?platform=ios")
+        let jsCodeLocation = CodePush.bundleURL()
         
+        /*#if DEBUG
+        jsCodeLocation = URL(string: "http://localhost:8081/index.ios.bundle?platform=ios")
+        #else
+        jsCodeLocation = [CodePush bundleURL];
+        #endif*/
         let rootView = RCTRootView(
-            bundleURL: jsCodeLocation as URL!,
-            moduleName: "TestComponent",
+            bundleURL: jsCodeLocation,
+            moduleName: "CodePushDemoApp",
             initialProperties: nil,
             launchOptions: nil
         )

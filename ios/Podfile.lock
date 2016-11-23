@@ -1,4 +1,14 @@
 PODS:
+  - CodePush (1.15.0):
+    - CodePush/Core (= 1.15.0)
+    - CodePush/SSZipArchive (= 1.15.0)
+    - React
+  - CodePush/Core (1.15.0):
+    - React
+  - CodePush/SSZipArchive (1.15.0):
+    - React
+  - React (0.34.0):
+    - React/Core (= 0.34.0)
   - React/Core (0.34.0)
   - React/RCTImage (0.34.0):
     - React/Core
@@ -11,6 +21,7 @@ PODS:
     - React/Core
 
 DEPENDENCIES:
+  - CodePush (from `../node_modules/react-native-code-push`)
   - React/Core (from `../node_modules/react-native`)
   - React/RCTImage (from `../node_modules/react-native`)
   - React/RCTNetwork (from `../node_modules/react-native`)
@@ -18,12 +29,15 @@ DEPENDENCIES:
   - React/RCTWebSocket (from `../node_modules/react-native`)
 
 EXTERNAL SOURCES:
+  CodePush:
+    :path: ../node_modules/react-native-code-push
   React:
     :path: ../node_modules/react-native
 
 SPEC CHECKSUMS:
+  CodePush: caf5a6410056e8819079d7b5543576225dc8f2cd
   React: 2e2e1e59f9854460b8a688645ef4cc24d5a2dd32
 
-PODFILE CHECKSUM: 92c4c309d27459794beb0067b0f4152dc6178d5b
+PODFILE CHECKSUM: 0a94f67d39033e1109a046beff2353a7822c4455
 
 COCOAPODS: 1.1.1

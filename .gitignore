@@ -1,2 +1,5 @@
 node_modules/
+ios/build/
 */Pods/
+.DS_Store
+*.jsbundle*
